@@ -1,0 +1,18 @@
+<header class="row">
+  <div class="col-md-2">
+    <div class="title">Judson's Angular Playground</div>
+  </div>
+  <div class="col-md-10">
+    <nav class="pull-left">
+      <a [routerLink]="['Home']">Home</a>
+      <a [routerLink]="['About']">About</a>
+    </nav>
+  </div>
+</header>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<section>
+  <h2>This is the first directive</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <form class="form form-horizontal">
+        <div class="form-group">
+          <label>Updating this input will only update the local model binding on the directive</label>
+          <input class="form-control" type="text" [(ngModel)]="name"/>OUTPUT: {{name}}
+          <br>
+          <br>
+          <label>Updating this input will update the model binding on the global service</label>
+          <input class="form-control" [(ngModel)]="mockService.someName" placeholder="Enter some text!"/>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="posts">
+        <ul>
+          <li *ngFor="let item of data">{{item.title}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

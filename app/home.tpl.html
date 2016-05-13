@@ -1,0 +1,43 @@
+<div class="row">
+
+  <form class="form form-horizontal">
+
+    <div class="form-group col-md-6">
+      <label>This input fires an event emiiter which updates the other components via subscribe.</label>
+      <input class="form-control" (input)="changeName($event)" placeholder="Enter some text!"/>
+    </div>
+
+
+    <div class="form-group col-md-6">
+      <label>This input is bound to a mock service variable using ngModel.</label>
+      <input class="form-control" [(ngModel)]="mockService.someName" placeholder="Enter some text!"/>
+    </div>
+
+
+  </form>
+
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h3 *ngIf="!posts">Loading...</h3>
+
+    <h3 *ngIf="posts">Data Loaded!</h3>
+    <a href="javascript:void(0);" (click)="changeData()">Click Here to watch data change in both components.</a>
+
+    <div class="posts">
+      <ul>
+        <li *ngFor="let item of data">{{item.title}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-md-6">
+    <firstDirective></firstDirective>
+  </div>
+  <div class="col-md-6">
+    <secondDirective></secondDirective>
+  </div>
+</div>
